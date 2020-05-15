@@ -1,0 +1,25 @@
+
+.autocompleteDropdown {
+  position: relative;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  max-height: 400px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.dropdownItem {
+  padding: 10px;
+  border-bottom: 1px solid black;
+}
+
+.dropdownItemFocused {
+  background-color: rgba(175, 223, 255, 0.5);
+}
+
+.dropdownItemSelected {
+  background-color: rgb(67, 171, 255);
+}

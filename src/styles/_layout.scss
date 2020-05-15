@@ -1,0 +1,7 @@
+@import './helpers';
+
+$spacing: makeScale('ex');
+
+@function spacing($size: 'm') {
+  @return getSize($spacing, $size);
+}

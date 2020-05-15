@@ -1,0 +1,11 @@
+@import './colors';
+@import './helpers';
+@import './typography';
+
+$buttonLineHeight: getSize($lineHeights, 'm');
+$buttonFontWeight: fontWeight('regular');
+
+$buttonPrimaryBackgroundColor: color('blue');
+$buttonSecondaryBackgroundColor: color('white');
+
+$buttonBorderRadius: 2px;

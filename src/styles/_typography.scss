@@ -1,0 +1,23 @@
+@import './helpers';
+
+$fontSizes: makeScale('rem');
+
+$lineHeights: makeScale('');
+
+$fontWeights: (
+  light: 300,
+  regular: 400,
+  semiBold: 500,
+  bold: 700,
+);
+
+@function fontSize($size: 'm') {
+  @return getSize($fontSizes, $size);
+}
+
+@function fontWeight($weightKey) {
+  @if (map-has-key($map: $fontWeights, $key: $weightKey)) {
+    @return map-get($map: $fontWeights, $key: $weightKey);
+  }
+  @error '`Font weight #{$weightKey}` not found!';
+}

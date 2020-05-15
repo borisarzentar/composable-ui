@@ -1,0 +1,25 @@
+$black: black;
+$white: white;
+$blue: blue;
+$red: red;
+$lightred: pink;
+
+$palette: (
+    'grey100': rgb(32, 32, 33),
+    'yellow510': rgb(255, 255, 0),
+    'yellow657': rgb(255, 245, 157),
+    'black': $black,
+    'grey': grey,
+    'lightgrey': lightgrey,
+    'white': $white,
+    'blue': $blue,
+    'red': $red,
+    'lightred': $lightred
+);
+
+@function color($color) {
+    @if (map-has-key($palette, $color)) {
+        @return map-get($palette, $color);
+    }
+    @error '`Color #{$color}` not found!';
+}

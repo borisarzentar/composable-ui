@@ -1,0 +1,16 @@
+$scale: 0, 0.694, 0.8, 1, 1.25, 1.563, 1.953, 2.441;
+$shirtSizes: z, xs, s, m, l, xl, xxl, jumbo;
+
+@function makeScale($unit) {
+    $tempScale: ();
+
+    @each $size in $scale {
+        $tempScale: append($tempScale, #{$size}#{$unit});
+    }
+
+    @return $tempScale;
+}
+
+@function getSize($list, $size) {
+    @return nth($list, index($shirtSizes, $size));
+}

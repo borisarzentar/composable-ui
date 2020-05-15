@@ -1,0 +1,65 @@
+@import '../../../styles/layout';
+@import '../../../styles/buttons';
+@import '../../../styles/typography';
+
+$buttonSizes: 's', 'm', 'l';
+
+.button {
+    display: inline-block;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: $buttonBorderRadius;
+
+    touch-action: manipulation;
+    user-select: none;
+
+    white-space: nowrap;
+    cursor: pointer;
+
+    padding: spacing('m') spacing('m');
+    font-size: fontSize('m');
+    font-weight: $buttonFontWeight;
+    line-height: $buttonLineHeight;
+
+    color: color('black');
+    background-color: color('white');
+    border-color: color('grey');
+
+    transition: background-color 0.2s ease-out, color 0.2s ease-out;
+
+    &:focus {
+        outline: none;
+        box-shadow: 0px 0px 2px 4px color('grey');
+    }
+
+    &:hover {
+        background-color: color('lightgrey');
+    }
+
+    &:active {
+        box-shadow: none;
+    }
+
+    &:disabled {
+        color: color('grey');
+        background-color: color('white');
+        border-color: color('grey');
+        cursor: not-allowed;
+    }
+}
+
+@each $size in $buttonSizes {
+    .button.#{$size} {
+        padding: spacing($size);
+    }
+}
+
+.primary {
+    color: color('black');
+    background-color: $buttonPrimaryBackgroundColor;
+}
+
+.secondary {
+    color: color('black');
+    background-color: $buttonSecondaryBackgroundColor;
+}

@@ -1,0 +1,7 @@
+@import '../../../styles/layout';
+@import '../../../styles/typography';
+
+.input {
+  font-size: fontSize('m');
+  padding: spacing('m');
+}

@@ -1,0 +1,15 @@
+@import '../../../styles/layout';
+
+.searchInput {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.input {
+  flex: 1;
+}
+
+.button {
+  margin-left: spacing('m');
+}
